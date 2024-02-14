@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fruit Shop Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+:root {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  height: max-content;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 0;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+  #header {
+    text-align: center;
+    height: auto;
+  }
+}
+.header-content-div {
+  max-width: 95rem;
+  width: auto;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .header-content-div {
+    max-width: 75rem;
+  }
+}
+#header-img {
+  height: 8rem;
+  width: auto;
+}
+@media (max-width: 800px) {
+  #header-img {
+    height: 4rem;
+  }
+}
+nav {
+  position: relative;
+  top: 0.8rem;
+  float: right;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.5rem 0;
+}
+@media (max-width: 800px) {
+  nav {
+    position: static;
+    float: none;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  margin: 0 0.5rem;
+  padding: 0 0.6rem;
+  transition: border-bottom 0.2s;
+}
+@media (max-width: 475px) {
+  .nav-link {
+    margin: 0 0.2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+.nav-link:hover {
+  color: yellowgreen;
+  border-bottom: 2px solid yellow;
+}
+.nav-link:active {
+  color: yellowgreen
+}
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.home-sec {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  text-align: start;
+  min-height: 60rem;
+  height: auto;
+  margin: 0 auto 5rem auto;
+  justify-content: start;
+  max-width: 95rem;
+  color: #333;
+}
+@media (max-width: 800px) {
+  .home-sec {
+    flex-flow: column wrap;
+    max-width: 100%;
+  }
+}
+.eye-grabber {
+  flex: 1;
+  padding: 0 2rem;
+}
+@media (max-width: 800px) {
+  .eye-grabber {
+    max-width: max-content;
+    padding-bottom: 8rem;
+  }
+}
+.eye-grabber h1 {
+  font-size: 5rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.eye-grabber h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #666;
+}
+.eye-grabber-img {
+  flex: 1;
+}
+@media (max-width: 800px) {
+  .eye-grabber-img {
+    width: 100%;
+  }
+}
+.eye-grabber-img img {
+  max-width: 100%;
+}
+.btn {
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  background-color: rgb(225, 225, 71);
+  color: #fafafa;
+  outline: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.section-heading {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  padding: 5rem 0 5rem 0;
+  text-align: center;
+}
+.sec-content-div {
+  font-size: 2rem;
+  text-align: start;
+  padding: 0 2rem 5rem 2rem;
+  width: auto;
+  justify-content: space-around;
+  max-width: 95rem;
+  margin: 0 auto;
+}
+.sec-padding {
+  padding: 8rem 0 10rem 0;
+}
+#about {
+  background-color: #fafafa;
+}
+#about img {
+  max-width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
+}
+#varieties {
+  background-color: #e3e3e3;
+}
+.tile {
+  background-color: #fafafa;
+  height: 40rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+@media (max-width: 680px) {
+  .tile {
+    width: auto;
+    max-width: 100%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    height: auto;
+  }
+}
+.tile img {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 0.5rem;
+}
+.tile h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: yellowgreen;
+  margin: 0;
+}
+.tile p {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+#our-service {
+  background-color : rgba(209, 209, 31, 0.773);
+}
+.bars {
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 2rem;
+  width: 100%;
+}
+@media (max-width: 990px) {
+  .bars {
+    flex-flow: column wrap;
+  }
+  .icon-container {
+    margin: 0 2.5rem;
+  }
+}
+.bars .icon-container {
+  max-width: 10rem;
+  flex: 1;
+}
+.icon-container img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.bars .txt-container {
+  flex: 2;
+  padding: 3rem;
+}
+.txt-container h5 {
+  font-size: 4rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.txt-container p {
+  font-size: 2.3rem;
+}
+#benefits {
+    background-color : rgb(149, 149, 7);
+}
+#benefits iframe {
+  outline: 0;
+  border: none;
+  width:100%;
+  border-radius: 0.4rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+#contact {
+  background-color: rgba(119, 119, 19, 0.773);
+  color: #fafafa;
+}
+#contact h6 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+input[type="email"] {
+  border: none;
+  outline: 0;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 2rem;
+}
+@media (max-width: 520px) {
+  #contact h6 {
+    font-size: 2rem;
+  }
+  #contact input[type="submit"],
+  #contact input[type="email"] {
+    margin: 1rem 1rem 0 1rem;
+  }
+}
+footer {
+  font-size: 1.4rem;
+  background-color: rgba(209, 209, 31, 0.993);
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: #fafafa;
+}
+footer a {
+  color: #e3e3e3;
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="#home-sec">
+          <img
+            src="https://img.freepik.com/vector-premium/diseno-logotipo-fruta-organica-mango_530862-575.jpg?w=2000"
+            alt="Company Logo"
+            id="header-img"
+        /></a>
+        <nav id="nav-bar">
+          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#varieties" class="nav-link">VARIETIES</a>
+          <a href="#our-service" class="nav-link">OUR SERVICE</a>
+          <a href="#benefits" class="nav-link">BENEFITS</a>
+          <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home-sec" class="flexible home-sec">
+        <div class="eye-grabber-img">
+          <img src="https://i.pinimg.com/736x/6d/77/11/6d7711d31a83d6701262b95290f94f9e.jpg" alt="Image of Apples" />
+        </div>
+        <div class="eye-grabber">
+          <h1>Sweet, Juicy, Aromatic.</h1>
+          <h2>
+            100% Organic, vivid varieties of mangoes grown in India .
+          </h2>
+          <button class="btn" onclick="window.location.href = '#contact';">
+            Buy Now
+          </button>
+        </div>
+      </section>
+      <section id="about" class="sec-padding">
+        <h3 class="section-heading">ABOUT US</h3>
+        <div class="sec-content-div flexible">
+          <p>
+            <b>Welcome to FreshPicked Mango Co.</b>, where we cultivate the finest organic mangoes with a commitment to sustainable farming. 
+            Our orchards, nurtured by dedicated farmers, prioritize environmental health, steering clear of synthetic pesticides. 
+            We guarantee premium quality, meticulously harvested mangoes that are not only delicious but also free from harmful residues. 
+            Embracing transparency, we share the journey from orchard to your doorstep, promoting a healthier, eco-conscious lifestyle. 
+            Choose FreshPicked Mango Co. for a taste of nature's goodness and the joy of supporting sustainable agriculture.
+          </p>
+          <img src="https://getfarms.in/assets/images/blog/Organic-Mango-Farming-Benefits-Types-Advantages-&-Disadvantages.webp" alt="" />
+        </div>
+      </section>
+      <section id="varieties" class="sec-padding">
+        <h3 class="section-heading">VARIETIES</h3>
+        <div class="sec-content-div flexible">
+          <div class="tile">
+            <img src="https://cherrypick.city/cdn/shop/files/02-1024x1024.webp?v=1683813420" alt="photo" />
+            <h4>Banginapalli</h4>
+            <p>
+              Produced in Banaganapalle of Kurnool district. 
+              With its pleasant aroma, they are oval in shape and is around 14 cm in length.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://fifthspring.in/wp-content/uploads/2023/06/TOTAPURI54bca.png"
+              alt="photo"
+            />
+            <h4>Totapuri</h4>
+            <p>
+             Hails from Karnataka. Mild in taste and greenish in colour, this variety of mango looks like a parrot's beak.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/5/XY/TN/LG/122269844/sindhura-mangoes.jpeg" alt="photo" />
+            <h4>Sindhura</h4>
+            <p>
+             This variant is sweet, and yet has a slight tanginess. This is very good for preparing shakes, as the pulp has a good yellow colour.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://wordsmithkaur.com/wp-content/uploads/2019/04/Kobbari-mammidikaya.jpg" alt="photo" />
+            <h4>Kobbari Mamidi</h4>
+            <p>
+              It is usually available at the end of mango season. They are grown in A.P. and Telangana. 
+              It is very large in size.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://media.e-valy.com/cms/products/images/b38352ff-8770-4be4-88dd-3339d955ed34" alt="photo" />
+            <h4>Himsagar</h4>
+            <p>
+              Characterised by a sweet aroma, this variety is the specialty of West Bengal and Orissa.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://images.jdmagicbox.com/quickquotes/images_main/raspuri-mango-puree-375777650-re05h.jpg" alt="photo" />
+            <h4>Raspuri</h4>
+            <p>
+             Largely grown and consumed in Old Mysuru of Karnataka, this variety is known as the Queen of Mangoes in India. 
+             It arrives in the month of May and is available by the end of June.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="our-service" class="sec-padding">
+        <h3 class="section-heading">OUR SERVICE</h3>
+        <div class="sec-content-div">
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/w6H542X/Fresh.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Fresh</h5>
+              <p>We deliver fresh mangoes with a 100% guarantee of freshness.</p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/FKNq4Qr/delivered.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Fast</h5>
+              <p>
+                We deliver your orders as fast as possible, delivery procedure
+                begins as soon as mango is plucked from tree.
+              </p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/HHQK1wV/happy.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Satisfying</h5>
+              <p>
+                We guarantee 100% customer satisfaction. We do our best to make
+                your purchase experience smooth. But if we mess up somehow you
+                will get compensated for every inconvenience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="benefits" class="sec-padding">
+        <h3 class="section-heading">BENEFITS</h3>
+        <div class="sec-content-div flexible">
+            <iframe width="866" height="487" src="https://www.youtube.com/embed/L5jWmrHlGGg" title="15 HEALTH BENEFITS OF MANGOES- why mango is good for your brain and body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         </div>
+      </section>
+      <section class="sec-padding" id="contact">
+        <h3 class="section-heading">CONTACT</h3>
+        <div class="sec-content-div flexible">
+          <h6>To make an order or just to know more contact us :</h6>
+          <form
+            id="form"
+            action="https://www.freecodecamp.com/email-submit"
+            method="POST"
+          >
+          <input type="email" name="email" id="email" placeholder="Your Email Address" required />
+          <input type="button" class="btn" id="submit" value="Know More" onclick="knowMore()" />
+          </form>
+          <p id="actionMessage" style="display: none;">Thanks for expressing interest! We will get in touch with you soon.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Created by
+      <a href="#">Divya</a>
+    </footer>
+    <script>
+      function knowMore() {
+  // Replace this alert with your desired action
+  var actionMessage = document.getElementById("actionMessage");
+  actionMessage.style.display = "block";
+}
+
+      </script>
+  </body>
+</html>
